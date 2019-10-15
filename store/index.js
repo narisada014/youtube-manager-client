@@ -23,5 +23,8 @@ export const mutations = {
 export const getters = {
   getPopularVideos(state) {
     return state.items
-  }
+  },
+  getMeta(state) {
+    return state.meta
+  },
 };
