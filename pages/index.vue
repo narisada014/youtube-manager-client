@@ -34,14 +34,14 @@ export default {
     }
   },
   methods: {
-    async loadMore() {
+    loadMore() {
       const payload = {
         uri: ROUTES.GET.POPULARS,
         params: {
           pageToken: this.nextPageToken
         }
       };
-      await this.$store.dispatch('fetchPopularVideos', payload)
+      this.$store.dispatch('fetchPopularVideos', payload)
     }
   },
   async fetch({store}) {
